@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Список задач</h1>
+      <ul id="todo-list"></ul>
+      <button id="add-todo-button">Добавить задачу</button>
+    </div>
+    <script type="text/template" id="todo-template">
+      <input class="toggle" type="checkbox" <%= done ? 'checked' : '' %>
+      <label><%= title %></label>
+      <button class="delete">Delete</button>
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
